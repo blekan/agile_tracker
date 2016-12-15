@@ -36,6 +36,7 @@ defmodule AgileTracker.Web do
 
       import AgileTracker.Router.Helpers
       import AgileTracker.Gettext
+      import AgileTracker.Auth, only: [authenticate_user: 2]
     end
   end
 
@@ -58,6 +59,7 @@ defmodule AgileTracker.Web do
   def router do
     quote do
       use Phoenix.Router
+      import AgileTracker.Auth, only: [authenticate_user: 2]
     end
   end
 

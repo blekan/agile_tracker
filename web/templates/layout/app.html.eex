@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello AgileTracker!</title>
+    <title>AgileTracker!</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
@@ -30,11 +30,7 @@
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
 
       <main role="main">
-        <%= if @current_user do %>
-          <%= render @view_module, @view_template, assigns %>
-        <% else %>
-          <%= render AgileTracker.SessionView, "new.html", assigns %>
-        <% end %>
+        <%= render @view_module, @view_template, assigns %>
       </main>
 
     </div> <!-- /container -->
